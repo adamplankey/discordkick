@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const keepAlive = require("./server");
+
 const client = new Discord.Client({ intents: ["GUILD_VOICE_STATES", "GUILD_MESSAGES", "GUILDS", "GUILD_PRESENCES"] });
 
 const config = require("./config.json");
@@ -27,4 +27,4 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 });
 
 client.login(config.token);
-keepAlive();
+
